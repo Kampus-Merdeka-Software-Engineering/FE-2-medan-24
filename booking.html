@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Family -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- JavaScript -->
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header class="primary-header flex">
+        <div>
+            <img src="assets/logo-3-removebg-preview.png" alt="logo" class="logo">
+        </div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only"></span>
+        </button>
+        <nav>
+            <ul id="primary-navigation" class="primary-navigation flex" data-visible="false"> 
+                <li class="active">
+                    <a href="/index.html">
+                        <span aria-hidden="true"></span>Home
+                    </a>
+                </li>
+                <li>
+                    <a href="/index.html#menu">
+                        <span aria-hidden="true"></span>Menu
+                    </a>
+                </li>
+                <li>
+                    <a href="/index.html#about-us">
+                        <span aria-hidden="true"></span>About
+                    </a>
+                </li>
+                <li>
+                    <a href="/booking.html" class="home-active">
+                        <span aria-hidden="true"></span>Booking
+                    </a>
+                </li>
+                <li>
+                    <a href="/team.html">
+                        <span aria-hidden="true"></span>Our Team
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class = "banner">
+        <h2>BOOK YOUR TABLE NOW</h2>
+        <div class = "card-container">
+            <div class = "card-img">
+                <!-- image here -->
+            </div>
+
+            <div class = "card-content">
+                <h3>Reservation</h3>
+                <h4>Book A Table Online</h4>
+                <form action="#" class="booking-form" method="post">
+                    <div class = "form-row">
+                        <select name="no-table" id="no-table" class="no-table">
+                            <option value="table-select">Pilih Meja</option>
+                            <option value="meja1">Meja 01</option>
+                            <option value="meja2">Meja 02</option>
+                            <option value="meja3">Meja 03</option>
+                            <option value="meja4">Meja 04</option>
+                            <option value="meja5">Meja 05</option>
+                            <option value="meja6">Meja 06</option>
+                            <option value="meja7">Meja 07</option>
+                            <option value="meja8">Meja 08</option>
+                        </select>
+                        <select name = "hours">
+                            <option value = "hour-select">Pilih Jam</option>
+                            <option value = "10">10: 00</option>
+                            <option value = "10">12: 00</option>
+                            <option value = "10">14: 00</option>
+                            <option value = "10">16: 00</option>
+                            <option value = "10">18: 00</option>
+                            <option value = "10">20: 00</option>
+                            <option value = "10">22: 00</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" id="name" name="visitor_name" placeholder="Masukkan Nama Anda" pattern="[A-Z\sa-z]{3,20}" required oninvalid="setCustomValidity('Nama tidak boleh mengandung angka atau karakter unique')">
+                        <input type="email" id="email" name="visitor_email" placeholder="(username)@email.com" required>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="date" id="checkin-date" name="checkin" required>
+                        <select id="room-selection" name="room_preference" required>
+                            <option value="">Masukkan jumlah orang yang hadir</option>
+                            <option value="connecting">5 People</option>
+                            <option value="adjoining">6 People</option>
+                            <option value="adjacent">7 People</option>
+                        </select>
+                        
+                    </div>
+                    <div class="form-row">
+                        <textarea name="visitor_request" id="visitor_request" cols="100" rows="5" placeholder="Special Request"></textarea>
+                    </div>
+                    <div class = "form-row">
+                        <input type = "submit" value = "BOOK NOW">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="assets/logo-3-removebg-preview.png" alt="Logo Restoran Vegetarian">
+            </div>
+            <div class="address">
+                <p>Alamat Restoran:</p>
+                <p>Jl. Contoh No. 123, Kota Anda</p>
+            </div>
+            <div class="contact">
+                <p>Contact Us:</p>
+                <p>Email: info@restoranvegetarian.com</p>
+                <p>Telepon: (123) 456-7890</p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><img src="assets/instagram-logo.png" alt="Instagram"></a>
+                <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="assets/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

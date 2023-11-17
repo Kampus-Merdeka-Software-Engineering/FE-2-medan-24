@@ -1,0 +1,917 @@
+/* HEADER */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --green-color: #3cb815;
+    --light-green-color: #c0eb7b;
+    --orange-color: #ff7e00;
+    --light-orange-color: #f75f1d;
+    --text-color: #1a2428;
+    --bg-color: #fff;
+    --main-green-color: #005a06;
+
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.logo {
+    margin: 2rem;
+    width: 120px;
+}
+
+
+.primary-header {
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 8px 11px rgb(14 55 54 / 15%);
+}
+
+.mobile-nav-toggle {
+    display: none;
+
+}
+
+.primary-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    background: hsl(0 0% 0% / 0.75);
+}
+
+@supports (backdrop-filter: blur(1rem)) {
+    .primary-navigation {
+        background: hsl(0 0% 100% / 0.1);
+        backdrop-filter: blur(1rem);
+    }
+}
+
+
+.primary-navigation a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.primary-navigation a:hover, .primary-navigation .home-active {
+    background:var(--main-green-color);
+    padding: 10px;
+    border-radius: 0.5rem;
+    color: var(--bg-color);
+    transition: background 0.5s;
+
+}
+
+.primary-navigation a > [aria-hidden="true"] {
+    font-weight: 700;
+    margin-inline-end: 0.75em;
+}
+
+@media (max-width: 35em) {
+    .primary-navigation {
+        --gap: 2em;
+
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2rem;
+
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background-color: transparent;
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        border: 0;
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+}
+
+@media (min-width: 35rem) and (max-width: 55rem) {
+    .primary-navigation a > span[aria-hidden] {
+        display: none;
+    }
+}
+
+@media (min-width: 35em) {
+    .primary-navigation {
+        --gap: clamp(1.5rem, 5vw, 3rem);
+        padding-block: 2rem;
+        padding-inline: clamp(3rem, 8vw, 10rem);
+
+    }
+}
+
+/* HOME SECTION */
+.container {
+    margin-top: 15px;
+    position: relative;
+    width: 100%;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    background: url("https://www.nutrihubeg.com/bg-items.36ec0e655f578e06.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.container img {
+    width: 400px;
+    position: absolute;
+    right: 0px;
+    /* bottom: -500px; */
+    top: 10px;
+}
+
+.home-text {
+    padding: 0 150px;
+}
+
+.home-text span {
+    /* position: absolute; */
+    /* left: 4.0rem; */
+    font-size: 7.3rem;
+    font-weight: 400;
+    color: var(--main-green-color);
+    /* line-height: 1.6425; */
+    /* font-family: Righteous, 'Source Sans Pro'; */
+    white-space: nowrap;
+}
+
+.home-text h1 {
+    /* position: absolute; */
+    /* left: 4.4rem; */
+    font-size: 2.2rem;
+    font-weight: 400;
+    /* line-height: 1.2425; */
+    letter-spacing: 1.104rem;
+    color: #000000;
+    /* font-family: Righteous, 'Source Sans Pro'; */
+    white-space: nowrap;
+}
+
+.home-text p {
+    width: 800px;
+    /* height: 7.2rem; */
+    /* position: absolute; */
+    /* left: 5.1rem; */
+    /* top: 54.9rem; */
+    font-size: 1.1rem;
+    text-align: justify;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.home-text .btn-book {
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 0.5rem;
+    background: var(--main-green-color);
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    width: 11.9048rem;
+    height: 2.6rem;
+    margin-right: 20px;
+}
+
+.home-text .btn-menu {
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 0.5rem;
+    background: var(--main-green-color);
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    width: 11.9048rem;
+    height: 2.6rem;
+}
+
+.home-text a:hover {
+    background: var(--orange-color);
+    transition: 0.2s ease;
+}
+
+.swiper-button-next {
+    background: url("/assets/right-arrow.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    margin-right: 20px;
+}
+
+.swiper-button-next::after {
+    display: none;
+}
+
+.swiper-button-prev {
+    background: url("/assets/left-arrow.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center;
+    margin-right: 20px;
+}
+
+.swiper-button-prev::after {
+    display: none;
+}
+
+/* POPULAR DISHES */
+
+.section-2  {
+    /* margin: 0rem 9.2rem 28.8rem 5.1rem; */
+    margin: 0rem 0rem 5rem;
+    /* width: calc(100% - 14.3rem); */
+    /* height: 30.1rem; */
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    /* position: absolute; */
+    justify-content: space-evenly;
+}
+
+.title-dishes{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.2425;
+    text-transform: capitalize;
+    color: #0d0d0d;
+}
+
+.line {
+    margin: auto;
+    width: 400px;
+    height: 8px;
+    background-color: #0d0d0d;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#popular {
+    text-align: center;
+}
+
+.section-2 .card {
+    width: 250px;
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.section-2 .card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-2 .name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.section-2 .rating{
+    color: #f1c40f; /* Warna kuning */
+    font-size: 1.5em;
+}
+
+/* ABOUT US */
+#about-us{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-evenly;
+    background: url("https://www.nutrihubeg.com/bg-items.36ec0e655f578e06.jpg");
+}
+
+.about-us-img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.about-us-title {
+    margin: 0rem 0rem 2.6rem 0.2rem;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.2425;
+    text-transform: capitalize;
+    color: #0d0d0d;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.about-us-content {
+    margin: 0rem 0rem 1.4rem 0.2rem;
+    max-width: 65.8rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    font-family: Poppins, 'Source Sans Pro';
+    flex-shrink: 0;
+    text-align: justify;
+}
+
+.about-us-btn {
+    text-decoration: none;
+    width: 12.4933rem;
+    height: 3rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fffefe;
+    font-family: Poppins, 'Source Sans Pro';
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-green-color);
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.about-us-btn:hover {
+    background: var(--orange-color);
+    transition: 0.2s ease;
+}
+
+/* MENU */
+#menu {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px auto;
+}
+
+#menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#menu ul li {
+    list-style: none;
+    background: #eee;
+    padding: 12px 20px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 8px;
+    
+}
+
+#menu ul li.active {
+    background: var(--main-green-color);
+    color: white;
+}
+
+#menu ul li:hover {
+    background: var(--main-green-color);
+    transition: 0.2s ease;
+    color: white;
+}
+
+.product {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; */
+    padding: 60px;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.product .itemBox {
+    /* position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    display: block; */
+    flex-basis: 300px;
+    /* background-color: #b49e9e; */
+    padding: 3px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.product .itemBox.hide {
+    display: none;
+}
+
+.product .itemBox img {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; */
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card-body {
+    padding: 15px 20px 20px;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.card-text {
+    font-size: 18px;
+
+}
+
+/* BOOK TABLE */
+#book-table-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 20px;
+    background: url("https://www.nutrihubeg.com/bg-items.36ec0e655f578e06.jpg");
+}
+
+.left-content {
+    /* flex: 1; */
+    padding: 20px;
+    padding-left: 100px;
+}
+
+.section-title {
+    margin-bottom: 2.3rem;
+    max-width: 49.6rem;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.2425;
+    text-transform: capitalize;
+    color: #0d0d0d;
+    flex-shrink: 0;
+}
+
+.section-description {
+    margin-bottom: 1.8rem;
+    max-width: 80rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: justify;
+    color: #000000;
+    flex-shrink: 0;
+}
+
+.book-button {
+    text-decoration: none;
+    width: 14.4786rem;
+    height: 3rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fffefe;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-green-color);
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.book-button:hover {
+    background-color: var(--orange-color);
+    transition: 0.2s ease;
+    
+}
+
+.table-image img {
+    width: 48.5rem;
+    /* height: 45.6rem; */
+    /* position: relative; */
+    left: 12.2rem;
+    top: 0;
+    background-size: 100% 100%;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    border-radius: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .book-table-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* HOW TO ORDER */
+
+.order-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    column-gap: 2.3929rem;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .title-order {
+        margin: 0rem 0rem 0rem 5.2rem;
+        font-size: 4rem;
+        font-weight: 400;
+        line-height: 1.2425;
+        text-transform: capitalize;
+        color: #0d0d0d;
+        font-family: Righteous, 'Source Sans Pro';
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    
+    .order-card {
+        /* text-align: center;
+        flex: 1;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 20px; */
+        box-sizing: border-box;
+        padding: 7.481rem 3.764rem 6.623rem 3.874rem;
+        width: 40.338rem;
+        height: 100%;
+        background-color: #fffefe;
+        border-radius: 0.5rem;
+        /* flex-shrink: 0; */
+    }
+
+    
+    .order-icon {
+        margin: 0rem 0rem 1.05rem 0.214rem;
+        width: 5.2686rem;
+        height: 4.3311rem;
+        object-fit: contain;
+        vertical-align: top;
+    }
+
+    
+    .order-title {
+        margin-bottom: 0.2154rem;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1.5;
+        text-transform: capitalize;
+        color: #0d0d0d;
+        white-space: nowrap;
+    }
+
+    
+    .order-description {
+        max-width: 32.7rem;
+        font-size: 1.7rem;
+        font-weight: 400;
+        line-height: 1.1725;
+        color: #000000;
+    }
+
+    
+    @media (max-width: 768px) {
+        .order-section {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .order-card {
+            margin: 10px 0;
+        }
+    }
+
+    /* TESTIMONIALs CUSTOMERS */
+.container-testimoni {
+    padding: 0 15px;
+    margin: auto;
+}
+
+.testimonials {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header .title-testimoni {
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 1.2;
+}
+
+.testimonials-item {
+    background-color: hsl(213, 43%, 96%);
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.testimonials-item .info {
+    display: flex;
+    align-items: center;
+}
+
+.testimonials-item img {
+    max-width: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.testimonials-item .name {
+    font-size: 24px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #000000;
+    line-height: 1.2;
+}
+
+.testimonials-item .jon {
+    text-transform: capitalize;
+    color: hsl(0, 0%, 40%);
+}
+
+.testimonials-item p {
+    margin-top: 20px;
+    color: hsl(0, 0%, 40%);
+}
+
+.testimonials-item .rating {
+    margin-top: 15px;
+    font-size: 14px;
+    color: hsl(36, 88%, 66%);
+}
+
+    /* DISKON */
+.discount-section {
+    /* display: flex;
+    align-items: center;
+    background-color: #fff;
+    flex-direction: column-reverse; */
+    margin-bottom: 4.1rem;
+    /* width: 144.4rem; */
+    /* height: 39.5rem; */
+    
+}
+
+.discount-container {
+    width: 100%;
+    height: 15.9rem;
+    /* position: absolute; */
+    /* left: 0; */
+    /* top: 0; */
+    /* background-color: #d9d9d9; */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: url("https://www.nutrihubeg.com/bg-items.36ec0e655f578e06.jpg");
+}
+
+/* .restaurant-image { */
+    /* flex: 1;
+    background-size: cover;
+    height: 400px; */
+/* } */
+
+.title-discount {
+    /* width: 67.5rem;
+    height: 10rem;
+    position: absolute;
+    left: 36.1rem;
+    top: 6rem; */
+    text-align: center;
+    font-size: 2rem;
+    /* font-weight: 400; */
+    line-height: 1.2425;
+    /* text-transform: capitalize; */
+    color: #0d0d0d;
+    
+}
+
+.discount-content {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.email-input {
+    margin-top: 20px;
+}
+
+.email-input input[type="email"] {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.email-input button {
+    padding: 10px 20px;
+    background-color: var(--main-green-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn-discount {
+    /* width: 9.2rem; */
+    /* height: 1.8rem; */
+    letter-spacing: 0.792rem;
+    text-transform: capitalize;
+    color: #fffefe;
+    font-family: Poppins, 'Source Sans Pro';
+    white-space: nowrap;
+}
+
+.email-input button:hover {
+    background-color: var(--orange-color);
+    transition: 0.2s ease;
+}
+
+/* FOOTER*/
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px; 
+    height: auto;
+}
+
+.address, .contact {
+    margin-right: 20px;
+}
+
+.address p, .contact p {
+    margin: 5px 0;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 30px; 
+    height: auto;
+}
+
+/* BOOKING PAGE */
+
+.banner{
+    margin-top: 20px;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("banner-img.jpg") center/cover no-repeat;
+    background: url("https://www.nutrihubeg.com/bg-items.36ec0e655f578e06.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    padding-bottom: 20px;
+}
+.card-container{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-columns: 420px 420px;
+}
+.card-img{
+    background: url("/assets/restaurant-table2.jpg") center/cover no-repeat;
+}
+.banner h2{
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.card-content{
+    background: #fff;
+    height: 530px;
+}
+.card-content h3{
+    margin-left: 40px;
+    text-align: left;
+    color: var(--main-green-color);
+    padding: 25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.card-content h4 {
+    color: var(--light-green-color);
+    /* text-align: center; */
+    padding: 0 40px;
+    font-size: 20px;
+}
+
+.form-row{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+.booking-form  select, input, textarea{
+    /* display: block; */
+    width: 100%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+}
+form input[type = text], form input[type = number], form input::placeholder, select, textarea{
+    color: #9a9a9a;
+}
+form input[type = submit]{
+    color: #fff;
+    background: var(--main-green-color);
+    padding: 12px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+form input[type = submit]:hover{
+    background-color: var(--orange-color);
+    transition: 0.2s ease;
+}
+@media(max-width: 992px){
+    .card-container{
+        grid-template-columns: 100%;
+        width: 100vw;
+    }
+    .card-img{
+        height: 330px;
+    }
+}

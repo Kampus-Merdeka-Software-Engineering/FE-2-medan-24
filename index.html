@@ -3,311 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#000000" />
-    <title>Menu</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gilroy%3A700"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C600%2C700"/>
-    <link rel="stylesheet" href="\FE-2-medan-24\assets\style.css"/>
-    
+    <title>Document</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Family -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- JavaScript -->
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    <header>
+    <header class="primary-header flex">
+        <div>
+            <img src="assets/logo-3-removebg-preview.png" alt="logo" class="logo">
+        </div>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="sr-only"></span>
+        </button>
         <nav>
-            <div class="logo">
-                <img src="\FE-2-medan-24/assets/images/logo.png" width="100%" alt="">
-            </div>
-            <ul class="nav-link">
-                <li>
-                    <a href="#home">Home</a>
+            <ul id="primary-navigation" class="primary-navigation flex" data-visible="false"> 
+                <li class="active">
+                    <a href="#home" class="home-active">
+                        <span aria-hidden="true"></span>Home
+                    </a>
                 </li>
                 <li>
-                    <a href="#menu-section">Menu</a>
+                    <a href="#menu">
+                        <span aria-hidden="true"></span>Menu
+                    </a>
                 </li>
                 <li>
-                    <a href="#about-us">About</a>
+                    <a href="#about-us">
+                        <span aria-hidden="true"></span>About
+                    </a>
+                </li>
+                <li>
+                    <a href="/booking.html">
+                        <span aria-hidden="true"></span>Booking
+                    </a>
+                </li>
+                <li>
+                    <a href="/team.html">
+                        <span aria-hidden="true"></span>Our Team
+                    </a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="home">
-            <div class="section-1">
-                    <img class="sayur-bg" width="100%" src="\FE-2-medan-24/assets/images/home-bg-1.png" alt="">
-                <div class="ellipse">
-                    <img class="retangle-bg1" width="100%" src="\FE-2-medan-24/assets/images/rectangle-1.png" alt="" class="retangle-1">
+
+    <!-- HOME -->
+    <section class="home swiper" id="home">
+        <div class="swiper-wrapper">
+            <!-- SLIDE 1 -->
+            <div class="swiper-slide container">
+                <div class="home-text">
+                    <span>ForFit</span>
+                    <h1>Indonesia</h1><br><br>
+                    <p>Indonesia ForFit adalah restoran yang berkomitmen untuk menyajikan makanan vegetarian yang sehat, lezat, dan bergizi. Kami menggabungkan rasa autentik Indonesia dengan berbagai pilihan makanan vegetarian yang memanjakan lidah Anda.</p>
+                    <a href="/booking.html" class="btn-book">Book Now</a>
+                    <a href="#menu" class="btn-menu">Our Menu</a>
                 </div>
-                <div class="ellipse-1"></div>
-                <div class="ellipse-2"></div>
-                <div class="ellipse-3"></div>
-                <h1 class="indonesia">Indonesian</h1>
-                <h1 class="forfit">ForFit</h1>
-                <p class="describe-section-1">Indonesia ForFit adalah restoran yang berkomitmen untuk menyajikan makanan vegetarian yang sehat, lezat, dan bergizi. Kami menggabungkan rasa autentik Indonesia dengan berbagai pilihan makanan vegetarian yang memanjakan lidah Anda.</p>
-                <button class="btn-menu">Our Menu</button>
-                <button class="btn-drinks">Our Drinks</button>
-            </div>            
-        </section>
-        <h3 class="title-dishes">Popular Dishes</h3>
+                <img src="https://www.nutrihubeg.com/assets/images/new-images/about-us.png" alt="">
+            </div>
+            <!-- SLIDE 2 -->
+            <div class="swiper-slide container">
+                <div class="home-text">
+                    <span>ForFit</span>
+                    <h1>Indonesia</h1><br><br>
+                    <p>Indonesia ForFit adalah restoran yang berkomitmen untuk menyajikan makanan vegetarian yang sehat, lezat, dan bergizi. Kami menggabungkan rasa autentik Indonesia dengan berbagai pilihan makanan vegetarian yang memanjakan lidah Anda.</p>
+                    <a href="/booking.html" class="btn-book">Book Now</a>
+                    <a href="#menu" class="btn-menu">Our Menu</a>
+                </div>
+                <img src="https://www.nutrihubeg.com/assets/images/new-images/customer-.png" alt="">
+            </div>
+            <!-- SLIDE 3 -->
+            <div class="swiper-slide container">
+                <div class="home-text">
+                    <span>ForFit</span>
+                    <h1>Indonesia</h1><br><br>
+                    <p>Indonesia ForFit adalah restoran yang berkomitmen untuk menyajikan makanan vegetarian yang sehat, lezat, dan bergizi. Kami menggabungkan rasa autentik Indonesia dengan berbagai pilihan makanan vegetarian yang memanjakan lidah Anda.</p>
+                    <a href="/booking.html" class="btn-book">Book Now</a>
+                    <a href="#menu" class="btn-menu">Our Menu</a>
+                </div>
+                <img src="https://www.nutrihubeg.com/assets/images/new-images/Mision.png" alt="">
+            </div>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- POPULAR DISHES -->
+    <h3 class="title-dishes">Popular Dishes</h3>
         <div class="line"></div>
         <br><br><br><br>
         <section id="popular">
-            <!-- <div class="section-2">
-                <div class="popular-list">
-                    <div class="group-1-list">
-                        <div class="group-2-list">
-                            <div class="list-name-1">Gado-gado</div>
-                            <div class="content-list">
-                                <div class="content-list-2">
-                                    <img src="./assets/images/mdi-clock-outline.png" alt="" class="img-content">
-                                    <p class="list-time">10 Mins</p>
-                                </div>
-                                <div class="rating-list">
-                                    <img src="/assets/images/star-1-KHb.png" alt="" class="star-rating-1">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <div class="section-2">
                 <div class="card">
-                    <img src="assets/images/rectangle-7-bg-n6V.png" alt="Gambar 1">
+                    <img src="assets/popular1.jpg" alt="Gambar 1">
                     <div class="name">Nama 1</div>
                     <div class="rating">★★★★☆</div>
                 </div>
             
                 <div class="card">
-                    <img src="assets/images/rectangle-7-bg-n6V.png" alt="Gambar 2">
+                    <img src="assets/popular2.jpg" alt="Gambar 2">
                     <div class="name">Nama 2</div>
                     <div class="rating">★★★★★</div>
                 </div>
             
                 <div class="card">
-                    <img src="assets/images/rectangle-7-bg-n6V.png" alt="Gambar 3">
+                    <img src="assets/popular3.png" alt="Gambar 3">
                     <div class="name">Nama 3</div>
                     <div class="rating">★★★☆☆</div>
                 </div>
             
                 <div class="card">
-                    <img src="assets/images/rectangle-7-bg-n6V.png" alt="Gambar 4">
+                    <img src="assets/popular4.png" alt="Gambar 4">
                     <div class="name">Nama 4</div>
                     <div class="rating">★★★★★</div>
                 </div>
             </div>
         </section>
 
-        <section id="about-us">
-            <img src="/assets/images/food-salad-r-1.png" alt="Tentang Kami">
-            <div class="about-us-text">
-                <h2 class="about-us-title">Tentang Kami</h2>
-                <p class="about-us-content">
-                    Kami menggunakan bahan-bahan segar dan berkualitas tinggi, serta mengutamakan masakan yang rendah lemak dan bebas daging. Kami percaya bahwa makanan vegetarian dapat memenuhi selera makan Anda dan memberikan manfaat kesehatan yang besar.
-                    <br><br>
-                    Kami didirikan dengan visi untuk memberikan alternatif makanan sehat dan berkelanjutan bagi masyarakat Indonesia. Kami mengutamakan bahan-bahan alami dan segar dalam setiap hidangan kami, serta memastikan bahwa setiap sajian tidak hanya memanjakan lidah Anda, tetapi juga mendukung gaya hidup sehat dan lingkungan yang berkelanjutan.
-                </p>
-                <div class="about-us-btn">Our Menu</div>
-            </div>
-        </section>
+    <!-- ABOUT US-->
+    <section id="about-us">
+        <img src="/assets/about-us.png" alt="Tentang Kami">
+        <div class="about-us-text">
+            <h2 class="about-us-title">Tentang Kami</h2>
+            <p class="about-us-content">
+                Kami menggunakan bahan-bahan segar dan berkualitas tinggi, serta mengutamakan masakan yang rendah lemak dan bebas daging. Kami percaya bahwa makanan vegetarian dapat memenuhi selera makan Anda dan memberikan manfaat kesehatan yang besar.
+                <br><br>
+                Kami didirikan dengan visi untuk memberikan alternatif makanan sehat dan berkelanjutan bagi masyarakat Indonesia. Kami mengutamakan bahan-bahan alami dan segar dalam setiap hidangan kami, serta memastikan bahwa setiap sajian tidak hanya memanjakan lidah Anda, tetapi juga mendukung gaya hidup sehat dan lingkungan yang berkelanjutan.
+            </p>
+            <a href="/team.html" class="about-us-btn">Our Team</a>
+        </div>
+    </section>
 
-        <section id="menu-section">
-            <div class="menu-container">
-                <div class="menu-card">
-                    <img src="assets/images/dishes/slim.png" alt="Makanan 1">
-                    <div class="menu-content">
-                        <div class="menu-name">Slim</div>
-                        <div class="menu-rating">★★★☆☆</div>
-                        <div class="menu-wait-time">
-                            <img class="wait-time-img" src="assets/images/mdi-clock-outline.png" alt="">
-                            <p class="duration-wait">10 Mints</p>
-                        </div>
-                        <div class="menu-price">Harga: Rp. 20.000</div>
-                    </div>
-                </div>
-        
-                <div class="menu-card">
-                    <img src="assets/images/dishes/fit.png" alt="Makanan 2">
-                    <div class="menu-content">
-                        <div class="menu-name">Fit</div>
-                        <div class="menu-rating">★★★★☆</div>
-                        <div class="menu-wait-time">
-                            <img class="wait-time-img" src="assets/images/mdi-clock-outline.png" alt="">
-                            <p class="duration-wait">10 Mints</p>
-                        </div>
-                        <div class="menu-price">Harga: Rp. 15.000</div>
-                    </div>
-                </div>
-                <div class="menu-card">
-                    <img src="assets/images/dishes/vegan.png" alt="Makanan 2">
-                    <div class="menu-content">
-                        <div class="menu-name">Vegan</div>
-                        <div class="menu-rating">★★★★☆</div>
-                        <div class="menu-wait-time">
-                            <img class="wait-time-img" src="assets/images/mdi-clock-outline.png" alt="">
-                            <p class="duration-wait">10 Mints</p>
-                        </div>
-                        <div class="menu-price">Harga: Rp. 15.000</div>
-                    </div>
-                </div>
-                <div class="menu-card">
-                    <img src="assets/images/dishes/keto.png" alt="Makanan 2">
-                    <div class="menu-content">
-                        <div class="menu-name">Keto</div>
-                        <div class="menu-rating">★★★★☆</div>
-                        <div class="menu-wait-time">
-                            <img class="wait-time-img" src="assets/images/mdi-clock-outline.png" alt="">
-                            <p class="duration-wait">10 Mints</p>
-                        </div>
-                        <div class="menu-price">Harga: Rp. 15.000</div>
-                    </div>
-            </div>
-            </div>
-            <div class="menu-container">
-                <div class="menu-card">
-                    <img src="assets/images/dishes/gym.png" alt="Makanan 2">
-                    <div class="menu-content">
-                        <div class="menu-name">Gym</div>
-                        <div class="menu-rating">★★★★☆</div>
-                        <div class="menu-wait-time">
-                            <img class="wait-time-img" src="assets/images/mdi-clock-outline.png" alt="">
-                            <p class="duration-wait">10 Mints</p>
-                        </div>
-                        <div class="menu-price">Harga: Rp. 15.000</div>
-                    </div>
-                </div>
-                <div class="menu-card">
-                    <img src="assets/images/dishes/fit 2.png" alt="Makanan 2">
-                    <div class="menu-content">
-                        <div class="menu-name">Fit 2</div>
-                        <div class="menu-rating">★★★★☆</div>
-                        <div class="menu-wait-time">
-                            <img class="wait-time-img" src="assets/images/mdi-clock-outline.png" alt="">
-                            <p class="duration-wait">10 Mints</p>
-                        </div>
-                        <div class="menu-price">Harga: Rp. 15.000</div>
-                    </div>
-                </div>
-                <div class="menu-card">
-                    <img src="assets/images/dishes/eug fugiat accumsan.png" alt="Makanan 2">
-                    <div class="menu-content">
-                        <div class="menu-name">Eum Fugiat Accumsan</div>
-                        <div class="menu-rating">★★★★☆</div>
-                        <div class="menu-wait-time">
-                            <img class="wait-time-img" src="assets/images/mdi-clock-outline.png" alt="">
-                            <p class="duration-wait">10 Mints</p>
-                        </div>
-                        <div class="menu-price">Harga: Rp. 15.000</div>
-                    </div>
-                </div>
-                <div class="menu-card">
-                    <img src="assets/images/dishes/eum fugiat nulla.png" alt="Makanan 2">
-                    <div class="menu-content">
-                        <div class="menu-name">Eum Fugiat Nulla</div>
-                        <div class="menu-rating">★★★★☆</div>
-                        <div class="menu-wait-time">
-                            <img class="wait-time-img" src="assets/images/mdi-clock-outline.png" alt="">
-                            <p class="duration-wait">10 Mints</p>
-                        </div>
-                        <div class="menu-price">Harga: Rp. 15.000</div>
-                    </div>
+    <!-- MENU-->
+    <section id="menu">
+        <ul>
+            <li class="list active" data-filter="menu">Menu</li>
+            <li class="list" data-filter="dishes">Dishes</li>
+            <li class="list" data-filter="salad">Salad</li>
+            <li class="list" data-filter="drinks">Drinks</li>
+        </ul>
+        <div class="product">
+            <div class="itemBox" data-item="dishes">
+                <img src="assets/menu/dish1-PhotoRoom.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="card-title">Fit</h3>
+                    <p class="card-text">Harga: Rp.15.000</p>
                 </div>
             </div>
-        </section>
+            <div class="itemBox" data-item="dishes">
+                <img src="assets/menu/dish2-PhotoRoom.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="card-title">Fit</h3>
+                    <p class="card-text">Harga: Rp.15.000</p>
+                </div>
+            </div>
+            <div class="itemBox" data-item="dishes">
+                <img src="assets/menu/dish3-PhotoRoom.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="card-title">Fit</h3>
+                    <p class="card-text">Harga: Rp.15.000</p>
+                </div>
+            </div>
+            <div class="itemBox" data-item="salad">
+                <img src="assets/menu/salad1-PhotoRoom.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="card-title">Fit</h3>
+                    <p class="card-text">Harga: Rp.15.000</p>
+                </div>
+            </div>
+            <div class="itemBox" data-item="salad">
+                <img src="assets/menu/salad2-PhotoRoom.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="card-title">Fit</h3>
+                    <p class="card-text">Harga: Rp.15.000</p>
+                </div>
+            </div>
+            <div class="itemBox" data-item="salad">
+                <img src="assets/menu/salad3-PhotoRoom.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="card-title">Fit</h3>
+                    <p class="card-text">Harga: Rp.15.000</p>
+                </div>
+            </div>
+            <div class="itemBox" data-item="drinks">
+                <img src="assets/menu/juice1-PhotoRoom.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="card-title">Fit</h3>
+                    <p class="card-text">Harga: Rp.15.000</p>
+                </div>
+            </div>
+            <div class="itemBox" data-item="drinks">
+                <img src="assets/menu/juice2-PhotoRoom.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="card-title">Fit</h3>
+                    <p class="card-text">Harga: Rp.15.000</p>
+                </div>
+            </div>
+            <div class="itemBox" data-item="drinks">
+                <img src="assets/menu/juice3-PhotoRoom.jpg" alt="">
+                <div class="card-body">
+                    <h3 class="card-title">Fit</h3>
+                    <p class="card-text">Harga: Rp.15.000</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="book-table-section">
-            <div class="left-content">
-                <div class="section-title">Booking Table</div>
-                <div class="section-description">
-                    <p>Dapatkan pengalaman kuliner unik di Indonesia ForFit, restoran kami yang berfokus pada makanan vegetarian. Nikmati cita rasa autentik Indonesia dalam setiap gigitan, sambil tetap menjaga kesehatan Anda. Jadikan kunjungan Anda lebih istimewa dengan memesan meja di restoran kami. Kami menawarkan lingkungan yang nyaman dan layanan ramah, sehingga Anda dapat menikmati makanan lezat kami dengan suasana yang santai. Jadwalkan kunjungan Anda sekarang dan bergabunglah dengan kami dalam menjalani gaya hidup sehat dan berkelanjutan bersama-sama.</p>
-                </div>
-                <button class="book-button">Book a Table</button>
+    <!-- BOOKING TABLE -->
+    <section id="book-table-section">
+        <div class="left-content">
+            <div class="section-title">Booking Table</div>
+            <div class="section-description">
+                <p>Dapatkan pengalaman kuliner unik di Indonesia ForFit, restoran kami yang berfokus pada makanan vegetarian. Nikmati cita rasa autentik Indonesia dalam setiap gigitan, sambil tetap menjaga kesehatan Anda. Jadikan kunjungan Anda lebih istimewa dengan memesan meja di restoran kami. Kami menawarkan lingkungan yang nyaman dan layanan ramah, sehingga Anda dapat menikmati makanan lezat kami dengan suasana yang santai. Jadwalkan kunjungan Anda sekarang dan bergabunglah dengan kami dalam menjalani gaya hidup sehat dan berkelanjutan bersama-sama.</p>
             </div>
-            <div class="table-image">
-                <img src="assets/images/booking-table-img.jpg" width="100%" alt="Meja Makan">
-            </div>
-        </section>
-        <p class="title-order">How To Order</p>
-        <section class="order-section">
-            <div class="order-card">
-                <img src="assets/images/solar-dollar-bold.png" alt="" class="order-icon">
-                <div class="order-title">Order Food</div>
-                <div class="order-description">Browse our menu and place an order for your favorite dishes.</div>
-            </div>
-            <div class="order-card">
-                <img src="assets/images/vector.png" alt="" class="order-icon">
-                <div class="order-title">Order Drinks</div>
-                <div class="order-description">Quench your thirst with our selection of refreshing drinks and beverages.</div>
-            </div>
-            <div class="order-card">
-                <img src="assets/images/game-icons-meal.png" alt="" class="order-icon">
-                <div class="order-title">Order Desserts</div>
-                <div class="order-description">Indulge in our delectable desserts for a sweet ending to your meal.</div>
-            </div>
-        </section>
-        <h3 class="title-customer">What Customers Says</h3>
-        <section id="customer-says">
-            <div class="container-customer">
-                <div class="customer-card">
-                    <div class="food-background">
-                        <!-- Gambar latar belakang makanan -->
-                        <img src="assets/images/rectangle-10-bg-E2V.png" alt="Food Background">
-                    </div>
-                    <div class="customer-info">
-                        <!-- Foto pelanggan -->
-                        <img src="assets/images/ellipse-5-bg.png" alt="Customer Photo">
-                        <!-- Peringkat bintang -->
-                        <div class="rating">
-                            <span class="star">&#9733;</span>
-                            <span class="star">&#9733;</span>
-                            <span class="star">&#9733;</span>
-                            <span class="star">&#9734;</span>
-                            <span class="star">&#9734;</span>
-                        </div>
-                        <!-- Komentar pelanggan -->
-                        <p>"Makanan di sini sangat lezat. Saya pasti akan datang lagi!"</p>
-                    </div>
-                </div>
-                
-                <div class="customer-card">
-                    <div class="food-background">
-                        <!-- Gambar latar belakang makanan -->
-                        <img src="assets/images/rectangle-10-bg-E2V.png" alt="Food Background">
-                    </div>
-                    <div class="customer-info">
-                        <!-- Foto pelanggan -->
-                        <img src="assets/images/ellipse-5-bg.png" alt="Customer Photo">
-                        <!-- Peringkat bintang -->
-                        <div class="rating">
-                            <span class="star">&#9733;</span>
-                            <span class="star">&#9733;</span>
-                            <span class="star">&#9733;</span>
-                            <span class="star">&#9733;</span>
-                            <span class="star">&#9733;</span>
-                        </div>
-                        <!-- Komentar pelanggan -->
-                        <p>"Saya suka segala hal tentang restoran ini! Pelayanannya luar biasa dan makanannya enak."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <a href="/booking.html" class="book-button">Book a Table</a>
+        </div>
+        <div class="table-image">
+            <img src="assets/about_us.png" width="100%" alt="Meja Makan">
+        </div>
+    </section>
 
-        <section class="discount-section">
-            <div class="discount-container">
-                <div class="discount-content">
-                    <h3 class="title-discount">Masukkan alamat email Anda untuk menerima penawaran khusus kami</h3>
+    <!-- HOW TO ORDER -->
+    <p class="title-order">How To Order</p>
+    <section class="order-section">
+        <div class="order-card">
+            <img src="assets/bell.png" alt="" class="order-icon">
+            <div class="order-title">Order Food</div>
+            <div class="order-description">Browse our menu and place an order for your favorite dishes.</div>
+        </div>
+        <div class="order-card">
+            <img src="assets/checklist.png" alt="" class="order-icon">
+            <div class="order-title">Order Drinks</div>
+            <div class="order-description">Quench your thirst with our selection of refreshing drinks and beverages.</div>
+        </div>
+        <div class="order-card">
+            <img src="assets/vegetarian.png" alt="" class="order-icon">
+            <div class="order-title">Order Desserts</div>
+            <div class="order-description">Indulge in our delectable desserts for a sweet ending to your meal.</div>
+        </div>
+    </section>
+
+    <!-- TESTIMONI CUSTOMER -->
+    <section class="testimonials">
+        <div class="container-testimoni">
+            <div class="section-header">
+                <h2 class="title-testimoni">What our customer says</h2>
+            </div>
+        <div class="testimoni-content">
+            <div class="testimonials-slider js-testimonials-slider">
+                <div class="testimonials-item">
+                    <div class="info">
+                        <img src="assets/ellipse-5-bg.png" alt="img-customer">
+                        <div class="text-box">
+                            <h3 class="name">Emily</h3>
+                            <span class="job">Web Developer</span>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad nulla, mollitia atque natus autem molestias a aliquid corporis accusantium rerum facere doloribus illum quae sed? Sapiente blanditiis eius magnam numquam.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- DISCOUNT OFFERING -->
+    <section class="discount-section">
+        <div class="discount-container">
+            <div class="discount-content">
+                <h3 class="title-discount">Masukkan alamat email Anda untuk menerima penawaran khusus kami</h3>
+                <form action="#" class="email-form" method="get">
                     <div class="email-input">
-                        <input type="email" placeholder="Masukkan alamat email Anda">
-                        <button type="submit"><p class="btn-discount">SUBMIT</p></button>
+                        <input type="email" placeholder="Masukkan alamat email Anda" required>
+                        <button type="submit"><a class="btn-discount">SUBMIT</a></button>
                     </div>
-                </div>
+                </form>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
-    
+<!-- FOOTER -->
     <footer>
         <div class="footer-content">
             <div class="logo">
-                <img src="assets/images/logo-2.png" alt="Logo Restoran Vegetarian">
+                <img src="assets/logo-3-removebg-preview.png" alt="Logo Restoran Vegetarian">
             </div>
             <div class="address">
                 <p>Alamat Restoran:</p>
@@ -319,11 +313,14 @@
                 <p>Telepon: (123) 456-7890</p>
             </div>
             <div class="social-icons">
-                <a href="#"><img src="assets/images/instagram-logo.png" alt="Instagram"></a>
-                <a href="#"><img src="assets/images/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="assets/images/whatsapp.png" alt="WhatsApp"></a>
+                <a href="#"><img src="assets/instagram-logo.png" alt="Instagram"></a>
+                <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="assets/whatsapp.png" alt="WhatsApp"></a>
             </div>
         </div>
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
