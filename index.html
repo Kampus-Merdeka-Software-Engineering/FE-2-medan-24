@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Font Family -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <!-- JavaScript -->
     <script src="js/script.js" defer></script>
+    <script src="js/swiper.js" defer></script>
 </head>
 <body>
     <header class="primary-header flex">
         <div>
-            <img src="assets/logo-3-removebg-preview.png" alt="logo" class="logo">
+            <img src="assets/forfit-indonesia-logo.png" alt="logo" class="logo">
         </div>
         <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
             <span class="sr-only"></span>
@@ -61,7 +63,7 @@
                 <div class="home-text">
                     <span>ForFit</span>
                     <h1>Indonesia</h1><br><br>
-                    <p>Indonesia ForFit adalah restoran yang berkomitmen untuk menyajikan makanan vegetarian yang sehat, lezat, dan bergizi. Kami menggabungkan rasa autentik Indonesia dengan berbagai pilihan makanan vegetarian yang memanjakan lidah Anda.</p>
+                    <p>ForFit Indonesia adalah restoran yang berkomitmen untuk menyajikan makanan vegetarian yang sehat, lezat, dan bergizi. Kami menggabungkan rasa autentik Indonesia dengan berbagai pilihan makanan vegetarian yang memanjakan lidah Anda.</p>
                     <a href="/booking.html" class="btn-book">Book Now</a>
                     <a href="#menu" class="btn-menu">Our Menu</a>
                 </div>
@@ -105,24 +107,40 @@
                 <div class="card">
                     <img src="assets/popular1.jpg" alt="Gambar 1">
                     <div class="name">Nama 1</div>
+                    <div class="wait">
+                        <i class="fa-regular fa-clock"></i>
+                        <div class="time">10 Menit</div>
+                    </div>
                     <div class="rating">★★★★☆</div>
                 </div>
             
                 <div class="card">
                     <img src="assets/popular2.jpg" alt="Gambar 2">
                     <div class="name">Nama 2</div>
+                    <div class="wait">
+                        <i class="fa-regular fa-clock"></i>
+                        <div class="time">10 Menit</div>
+                    </div>
                     <div class="rating">★★★★★</div>
                 </div>
             
                 <div class="card">
                     <img src="assets/popular3.png" alt="Gambar 3">
                     <div class="name">Nama 3</div>
+                    <div class="wait">
+                        <i class="fa-regular fa-clock"></i>
+                        <div class="time">10 Menit</div>
+                    </div>
                     <div class="rating">★★★☆☆</div>
                 </div>
             
                 <div class="card">
                     <img src="assets/popular4.png" alt="Gambar 4">
                     <div class="name">Nama 4</div>
+                    <div class="wait">
+                        <i class="fa-regular fa-clock"></i>
+                        <div class="time">10 Menit</div>
+                    </div>
                     <div class="rating">★★★★★</div>
                 </div>
             </div>
@@ -144,6 +162,7 @@
 
     <!-- MENU-->
     <section id="menu">
+        <svg class="wave-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill-opacity="1" d="M0,160L34.3,181.3C68.6,203,137,245,206,245.3C274.3,245,343,203,411,208C480,213,549,267,617,277.3C685.7,288,754,256,823,256C891.4,256,960,288,1029,256C1097.1,224,1166,128,1234,117.3C1302.9,107,1371,181,1406,218.7L1440,256L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path></svg>
         <ul>
             <li class="list active" data-filter="menu">Menu</li>
             <li class="list" data-filter="dishes">Dishes</li>
@@ -154,13 +173,15 @@
             <div class="itemBox" data-item="dishes">
                 <img src="assets/menu/dish1-PhotoRoom.jpg" alt="">
                 <div class="card-body">
-                    <h3 class="card-title">Fit</h3>
+                    <a class="card-tag tag-menu">DISHES</a>
+                    <h3 class="card-title">Pasta Dish</h3>
                     <p class="card-text">Harga: Rp.15.000</p>
                 </div>
             </div>
             <div class="itemBox" data-item="dishes">
                 <img src="assets/menu/dish2-PhotoRoom.jpg" alt="">
                 <div class="card-body">
+                    <a class="card-tag tag-menu">DISHES</a>
                     <h3 class="card-title">Fit</h3>
                     <p class="card-text">Harga: Rp.15.000</p>
                 </div>
@@ -168,53 +189,63 @@
             <div class="itemBox" data-item="dishes">
                 <img src="assets/menu/dish3-PhotoRoom.jpg" alt="">
                 <div class="card-body">
-                    <h3 class="card-title">Fit</h3>
+                    <a class="card-tag tag-menu">DISHES</a>
+                    <h3 class="card-title">Fruit Dish</h3>
                     <p class="card-text">Harga: Rp.15.000</p>
                 </div>
             </div>
             <div class="itemBox" data-item="salad">
                 <img src="assets/menu/salad1-PhotoRoom.jpg" alt="">
                 <div class="card-body">
-                    <h3 class="card-title">Fit</h3>
+                    <a class="card-tag tag-menu2">SALAD</a>
+                    <h3 class="card-title">Green Salad</h3>
                     <p class="card-text">Harga: Rp.15.000</p>
                 </div>
             </div>
             <div class="itemBox" data-item="salad">
                 <img src="assets/menu/salad2-PhotoRoom.jpg" alt="">
                 <div class="card-body">
-                    <h3 class="card-title">Fit</h3>
+                    <a class="card-tag tag-menu2">SALAD</a>
+                    <h3 class="card-title">Salad Pasta</h3>
                     <p class="card-text">Harga: Rp.15.000</p>
                 </div>
             </div>
             <div class="itemBox" data-item="salad">
                 <img src="assets/menu/salad3-PhotoRoom.jpg" alt="">
                 <div class="card-body">
-                    <h3 class="card-title">Fit</h3>
+                    <a class="card-tag tag-menu2">SALAD</a>
+                    <h3 class="card-title">Chicken Salad</h3>
                     <p class="card-text">Harga: Rp.15.000</p>
                 </div>
             </div>
             <div class="itemBox" data-item="drinks">
                 <img src="assets/menu/juice1-PhotoRoom.jpg" alt="">
                 <div class="card-body">
-                    <h3 class="card-title">Fit</h3>
+                    <a class="card-tag tag-menu3">DRINKS</a>
+                    <h3 class="card-title">Orange Juice</h3>
                     <p class="card-text">Harga: Rp.15.000</p>
                 </div>
             </div>
             <div class="itemBox" data-item="drinks">
                 <img src="assets/menu/juice2-PhotoRoom.jpg" alt="">
                 <div class="card-body">
-                    <h3 class="card-title">Fit</h3>
+                    <a class="card-tag tag-menu3">DRINKS</a>
+                    <h3 class="card-title">Vegetable Juice</h3>
                     <p class="card-text">Harga: Rp.15.000</p>
                 </div>
             </div>
             <div class="itemBox" data-item="drinks">
                 <img src="assets/menu/juice3-PhotoRoom.jpg" alt="">
                 <div class="card-body">
-                    <h3 class="card-title">Fit</h3>
+                    <a class="card-tag tag-menu3">DRINKS</a>
+                    <h3 class="card-title">Strawberry Juice</h3>
                     <p class="card-text">Harga: Rp.15.000</p>
                 </div>
             </div>
         </div>
+        <svg class="wave-buttom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill-opacity="1" d="M0,192L34.3,186.7C68.6,181,137,171,206,186.7C274.3,203,343,245,411,240C480,235,549,181,617,160C685.7,139,754,149,823,176C891.4,203,960,245,1029,256C1097.1,267,1166,245,1234,240C1302.9,235,1371,245,1406,250.7L1440,256L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,68,320,34,320L0,320Z"></path>
+        </svg>
     </section>
 
     <!-- BOOKING TABLE -->
@@ -258,16 +289,102 @@
                 <h2 class="title-testimoni">What our customer says</h2>
             </div>
         <div class="testimoni-content">
-            <div class="testimonials-slider js-testimonials-slider">
-                <div class="testimonials-item">
+            <div class="swiper testimonials-slider js-testimonials-slider">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide testimonials-item">
                     <div class="info">
-                        <img src="assets/ellipse-5-bg.png" alt="img-customer">
+                        <img src="assets/natalie-portman.jpeg" alt="img-customer">
                         <div class="text-box">
-                            <h3 class="name">Emily</h3>
-                            <span class="job">Web Developer</span>
+                            <h3 class="name">Natalie Portman</h3>
+                            <span class="job">Actress</span>
                         </div>
                     </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad nulla, mollitia atque natus autem molestias a aliquid corporis accusantium rerum facere doloribus illum quae sed? Sapiente blanditiis eius magnam numquam.</p>
+                    <p>I'm thoroughly impressed with the vegan dishes here! The flavors are so rich and diverse, making me not miss meat at all. Their vegan options truly changed my perspective on plant-based cuisine.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="swiper-slide testimonials-item">
+                    <div class="info">
+                        <img src="assets/Liam-Hemsworth.jpeg" alt="img-customer">
+                        <div class="text-box">
+                            <h3 class="name">Liam Hemsworth</h3>
+                            <span class="job">Actor</span>
+                        </div>
+                    </div>
+                    <p>This restaurant really knows how to make delicious vegan dishes! I tried their vegetable curry, and it tasted so authentic. Generous portions and reasonable prices made my dining experience truly enjoyable.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="swiper-slide testimonials-item">
+                    <div class="info">
+                        <img src="assets/lucy-watson.jpeg" alt="img-customer">
+                        <div class="text-box">
+                            <h3 class="name">Lucy Watson</h3>
+                            <span class="job">Jurnalist</span>
+                        </div>
+                    </div>
+                    <p>I'm always on the lookout for places that serve high-quality vegan food, and this restaurant is the answer! Their organic salad dishes are incredibly fresh and served with a tempting vinaigrette. It has become my go-to spot for a healthy meal.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="swiper-slide testimonials-item">
+                    <div class="info">
+                        <img src="assets/maggie-q.jpeg" alt="img-customer">
+                        <div class="text-box">
+                            <h3 class="name">Maggie Q</h3>
+                            <span class="job">Actress</span>
+                        </div>
+                    </div>
+                    <p>This vegan haven has won me over! The creativity in their plant-based menu is commendable. I opted for the quinoa and roasted vegetable bowl, and every bite was a burst of wholesome goodness. It's evident that they put a lot of thought into crafting flavorful and satisfying vegan options.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="swiper-slide testimonials-item">
+                    <div class="info">
+                        <img src="assets/Benedict-Cumberbatch.jpeg" alt="img-customer">
+                        <div class="text-box">
+                            <h3 class="name">Benedict Cumberbatch</h3>
+                            <span class="job">Actor</span>
+                        </div>
+                    </div>
+                    <p>I'm always on the lookout for salads that are both nutritious and delicious, and this vegan-friendly restaurant nailed it! Their avocado and black bean salad was not only visually appealing but also a delightful medley of textures and flavors. A must-try for salad enthusiasts!</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="swiper-slide testimonials-item">
+                    <div class="info">
+                        <img src="assets/ariana-grande.jpeg" alt="img-customer">
+                        <div class="text-box">
+                            <h3 class="name">Ariana Grande</h3>
+                            <span class="job">Actress</span>
+                        </div>
+                    </div>
+                    <p>This vegan spot takes salads to a whole new level! The kale and quinoa power bowl I had was not only a visual delight but also packed with nutrients. The addition of roasted vegetables and a creamy tahini dressing elevated the dish to a gourmet experience that exceeded my expectations.</p>
                     <div class="rating">
                         <i class="fa fa-star"></i>
                         <i class="fa fa-star"></i>
@@ -277,6 +394,8 @@
                     </div>
                 </div>
             </div>
+            </div>
+                <div class="swiper-pagination js-testimonials-pagination"></div>    
             </div>
         </div>
     </section>
@@ -301,7 +420,7 @@
     <footer>
         <div class="footer-content">
             <div class="logo">
-                <img src="assets/logo-3-removebg-preview.png" alt="Logo Restoran Vegetarian">
+                <img src="assets/forfit-indonesia-logo-removebg-preview.png" alt="Logo Restoran Vegetarian">
             </div>
             <div class="address">
                 <p>Alamat Restoran:</p>

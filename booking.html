@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Booking</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Font Family -->
@@ -11,11 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <!-- JavaScript -->
     <script src="js/script.js" defer></script>
+    
 </head>
 <body>
     <header class="primary-header flex">
         <div>
-            <img src="assets/logo-3-removebg-preview.png" alt="logo" class="logo">
+            <img src="assets/forfit-indonesia-logo.png" alt="logo" class="logo">
         </div>
         <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
             <span class="sr-only"></span>
@@ -60,28 +61,28 @@
             <div class = "card-content">
                 <h3>Reservation</h3>
                 <h4>Book A Table Online</h4>
-                <form action="#" class="booking-form" method="post">
+                <form id="bookingForm"  class="booking-form">
                     <div class = "form-row">
-                        <select name="no-table" id="no-table" class="no-table">
+                        <select name="table" id="table" class="table">
                             <option value="table-select">Pilih Meja</option>
-                            <option value="meja1">Meja 01</option>
-                            <option value="meja2">Meja 02</option>
-                            <option value="meja3">Meja 03</option>
-                            <option value="meja4">Meja 04</option>
-                            <option value="meja5">Meja 05</option>
-                            <option value="meja6">Meja 06</option>
-                            <option value="meja7">Meja 07</option>
-                            <option value="meja8">Meja 08</option>
+                            <option value="meja 01">Meja 01</option>
+                            <option value="meja 02">Meja 02</option>
+                            <option value="meja 03">Meja 03</option>
+                            <option value="meja 04">Meja 04</option>
+                            <option value="meja 05">Meja 05</option>
+                            <option value="meja 06">Meja 06</option>
+                            <option value="meja 07">Meja 07</option>
+                            <option value="meja 08">Meja 08</option>
                         </select>
-                        <select name = "hours">
+                        <select name="hours" id="hours">
                             <option value = "hour-select">Pilih Jam</option>
-                            <option value = "10">10: 00</option>
-                            <option value = "10">12: 00</option>
-                            <option value = "10">14: 00</option>
-                            <option value = "10">16: 00</option>
-                            <option value = "10">18: 00</option>
-                            <option value = "10">20: 00</option>
-                            <option value = "10">22: 00</option>
+                            <option value = "10:00">10: 00</option>
+                            <option value = "12:00">12: 00</option>
+                            <option value = "14:00">14: 00</option>
+                            <option value = "16:00">16: 00</option>
+                            <option value = "18:00">18: 00</option>
+                            <option value = "20:00">20: 00</option>
+                            <option value = "22:00">22: 00</option>
                         </select>
                     </div>
                     <div class="form-row">
@@ -90,30 +91,64 @@
                     </div>
 
                     <div class="form-row">
-                        <input type="date" id="checkin-date" name="checkin" required>
-                        <select id="room-selection" name="room_preference" required>
+                        <input type="date" id="date" name="date" required>
+                        <select id="person" name="person" required>
                             <option value="">Masukkan jumlah orang yang hadir</option>
-                            <option value="connecting">5 People</option>
-                            <option value="adjoining">6 People</option>
-                            <option value="adjacent">7 People</option>
+                            <option value="1 orang">1 Orang</option>
+                            <option value="2 orang">2 Orang</option>
+                            <option value="3 orang">3 Orang</option>
+                            <option value="4 orang">4 Orang</option>
+                            <option value="5 orang">5 Orang</option>
                         </select>
                         
                     </div>
                     <div class="form-row">
-                        <textarea name="visitor_request" id="visitor_request" cols="100" rows="5" placeholder="Special Request"></textarea>
+                        <textarea name="specialRequest" id="specialRequest" cols="100" rows="5" placeholder="Special Request"></textarea>
                     </div>
                     <div class = "form-row">
-                        <input type = "submit" value = "BOOK NOW">
+                        <input type="submit" value="BOOK NOW" onclick="saveBooking()">
                     </div>
                 </form>
             </div>
         </div>
     </section>
+    <div class="filter-container">
+        <h2>Daftar Booking Table </h2>
+        <div class="filter-data">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="search" oninput="filterTable()" placeholder="Cari berdasarkan nama">
+        <i class="fa-solid fa-sort" style="color: #050505;"></i>
+        <select id="sort" onchange="sortTable()">
+            <option value="table">Meja</option>
+            <option value="time">Jam</option>
+            <option value="name">Nama</option>
+            <option value="date">Tanggal</option>
+        </select>
+    </div>
+    </div>    
+    <!-- Tabel untuk menampilkan data booking -->
+<table id="bookingTable">
+    <thead>
+    <tr>
+        <th>Meja</th>
+        <th>Jam</th>
+        <th>Nama</th>
+        <th>Email</th>
+        <th>Tanggal</th>
+        <th>Jumlah Tamu</th>
+        <th>Special Request</th>
+        <th>Aksi</th>
+    </tr>
+    </thead>
+    <tbody id="bookingTableBody">
+    <!-- Data booking akan ditampilkan di sini -->
+    </tbody>
+</table>
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
             <div class="logo">
-                <img src="assets/logo-3-removebg-preview.png" alt="Logo Restoran Vegetarian">
+                <img src="assets/forfit-indonesia-logo-removebg-preview.png" alt="Logo Restoran Vegetarian">
             </div>
             <div class="address">
                 <p>Alamat Restoran:</p>
