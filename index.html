@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- Font Family -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&display=swap">
     <!-- Link Swiper's CSS -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <!-- JavaScript -->
-    <script src="js/script.js" defer></script>
-    <script src="js/swiper.js" defer></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/swiper.js" defer></script>
 </head>
 <body>
+    <div class="main-container">
     <header class="primary-header flex">
         <div>
             <img src="assets/forfit-indonesia-logo.png" alt="logo" class="logo">
@@ -27,7 +29,7 @@
         <nav>
             <ul id="primary-navigation" class="primary-navigation flex" data-visible="false"> 
                 <li class="active">
-                    <a href="#home" class="home-active">
+                    <a href="./index.html" class="home-active">
                         <span aria-hidden="true"></span>Home
                     </a>
                 </li>
@@ -42,12 +44,17 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/booking.html">
+                    <a href="./booking.html">
                         <span aria-hidden="true"></span>Booking
                     </a>
                 </li>
                 <li>
-                    <a href="/team.html">
+                    <a href="./list-booking.html">
+                        <span aria-hidden="true"></span>List Booking
+                    </a>
+                </li>
+                <li>
+                    <a href="./team.html">
                         <span aria-hidden="true"></span>Our Team
                     </a>
                 </li>
@@ -56,40 +63,41 @@
     </header>
 
     <!-- HOME -->
+    <div class="home-content">
     <section class="home swiper" id="home">
         <div class="swiper-wrapper">
             <!-- SLIDE 1 -->
             <div class="swiper-slide container">
                 <div class="home-text">
                     <span>ForFit</span>
-                    <h1>Indonesia</h1><br><br>
-                    <p>ForFit Indonesia adalah restoran yang berkomitmen untuk menyajikan makanan vegetarian yang sehat, lezat, dan bergizi. Kami menggabungkan rasa autentik Indonesia dengan berbagai pilihan makanan vegetarian yang memanjakan lidah Anda.</p>
-                    <a href="/booking.html" class="btn-book">Book Now</a>
+                    <h1>Indonesia</h1>
+                    <p>ForFit Indonesia is a restaurant dedicated to providing healthy, delicious, and nutritious vegetarian cuisine. We blend authentic Indonesian flavors with a diverse selection of vegetarian dishes that delight your palate.</p>
+                    <a href="./booking.html" class="btn-book">Book Now</a>
                     <a href="#menu" class="btn-menu">Our Menu</a>
                 </div>
-                <img src="https://www.nutrihubeg.com/assets/images/new-images/about-us.png" alt="">
+                <img src="./assets/slide1_img.png" alt="">
             </div>
             <!-- SLIDE 2 -->
             <div class="swiper-slide container">
                 <div class="home-text">
                     <span>ForFit</span>
-                    <h1>Indonesia</h1><br><br>
-                    <p>Indonesia ForFit adalah restoran yang berkomitmen untuk menyajikan makanan vegetarian yang sehat, lezat, dan bergizi. Kami menggabungkan rasa autentik Indonesia dengan berbagai pilihan makanan vegetarian yang memanjakan lidah Anda.</p>
-                    <a href="/booking.html" class="btn-book">Book Now</a>
+                    <h1>Indonesia</h1>
+                    <p>To become the prime destination for an innovative vegetarian culinary experience, <br> inspiring people towards a healthy and sustainable lifestyle.</p>
+                    <a href="./booking.html" class="btn-book">Book Now</a>
                     <a href="#menu" class="btn-menu">Our Menu</a>
                 </div>
-                <img src="https://www.nutrihubeg.com/assets/images/new-images/customer-.png" alt="">
+                <img src="./assets/slide2_img.png" alt="">
             </div>
             <!-- SLIDE 3 -->
             <div class="swiper-slide container">
                 <div class="home-text">
                     <span>ForFit</span>
-                    <h1>Indonesia</h1><br><br>
-                    <p>Indonesia ForFit adalah restoran yang berkomitmen untuk menyajikan makanan vegetarian yang sehat, lezat, dan bergizi. Kami menggabungkan rasa autentik Indonesia dengan berbagai pilihan makanan vegetarian yang memanjakan lidah Anda.</p>
+                    <h1>Indonesia</h1>
+                    <p>Actively participate in raising public awareness about the benefits of a vegetarian lifestyle for individual health and global sustainability..</p>
                     <a href="/booking.html" class="btn-book">Book Now</a>
                     <a href="#menu" class="btn-menu">Our Menu</a>
                 </div>
-                <img src="https://www.nutrihubeg.com/assets/images/new-images/Mision.png" alt="">
+                <img src="./assets/slide3_img.png" alt="">
             </div>
 
             </div>
@@ -97,66 +105,236 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
     </section>
+</div>
 
-    <!-- POPULAR DISHES -->
-    <h3 class="title-dishes">Popular Dishes</h3>
+    <!-- POPULAR Menu -->
+    <h3 class="title-dishes">Popular Menu</h3>
         <div class="line"></div>
-        <br><br><br><br>
-        <section id="popular">
-            <div class="section-2">
-                <div class="card">
-                    <img src="assets/popular1.jpg" alt="Gambar 1">
-                    <div class="name">Nama 1</div>
-                    <div class="wait">
-                        <i class="fa-regular fa-clock"></i>
-                        <div class="time">10 Menit</div>
-                    </div>
-                    <div class="rating">★★★★☆</div>
-                </div>
+        <section class="product-popular">
+        <div class="products-grid">
             
-                <div class="card">
-                    <img src="assets/popular2.jpg" alt="Gambar 2">
-                    <div class="name">Nama 2</div>
-                    <div class="wait">
-                        <i class="fa-regular fa-clock"></i>
-                        <div class="time">10 Menit</div>
+            <a href="#">
+    
+                <div class="product-card">
+      
+                  <div class="img-box">
+                    <img src="./assets/popular1.jpg" alt="product image" class="product-img" width="200" loading="lazy">
+      
+                    <div class="card-badge red">
+                        <ion-icon name="flame"></ion-icon>
+                        <p>Dishes</p>
                     </div>
+                  </div>
+      
+                  <div class="product-content">
+      
+                    <div class="wrapper">
+                      <h3 class="product-name">Chickpea Curry</h3>
+      
+                      <p class="product-price">
+                        <span class="small">$</span>27K
+                      </p>
+                    </div>
+      
+                    <p class="product-text">
+                      12 Minutes
+                    </p>
+      
                     <div class="rating">★★★★★</div>
+      
+                  </div>
+      
                 </div>
-            
-                <div class="card">
-                    <img src="assets/popular3.png" alt="Gambar 3">
-                    <div class="name">Nama 3</div>
-                    <div class="wait">
-                        <i class="fa-regular fa-clock"></i>
-                        <div class="time">10 Menit</div>
+      
+              </a>
+    
+              <a href="#">
+    
+                <div class="product-card">
+      
+                  <div class="img-box">
+                    <img src="./assets/popular5.jpg" alt="product image" class="product-img" width="200" loading="lazy">
+      
+                    <div class="card-badge orange">
+                      <ion-icon name="leaf"></ion-icon>
+                      <p>Drinks</p>
                     </div>
-                    <div class="rating">★★★☆☆</div>
-                </div>
-            
-                <div class="card">
-                    <img src="assets/popular4.png" alt="Gambar 4">
-                    <div class="name">Nama 4</div>
-                    <div class="wait">
-                        <i class="fa-regular fa-clock"></i>
-                        <div class="time">10 Menit</div>
+                  </div>
+      
+                  <div class="product-content">
+      
+                    <div class="wrapper">
+                      <h3 class="product-name">Orange Juice</h3>
+      
+                      <p class="product-price">
+                        <span class="small">$</span>12K
+                      </p>
                     </div>
+      
+                    <p class="product-text">
+                      7 Minutes
+                    </p>
+      
                     <div class="rating">★★★★★</div>
+      
+                  </div>
+      
                 </div>
-            </div>
-        </section>
+      
+              </a>
+    
+            <a href="#">
+    
+              <div class="product-card">
+    
+                <div class="img-box">
+                  <img src="./assets/popular3.png" alt="product image" class="product-img" width="200" loading="lazy">
+    
+                  <div class="card-badge green">
+                    <ion-icon name="leaf"></ion-icon>
+                    <p>Salads</p>
+                  </div>
+                </div>
+    
+                <div class="product-content">
+    
+                  <div class="wrapper">
+                    <h3 class="product-name">Cashew Alfredo Pasta</h3>
+    
+                    <p class="product-price">
+                      <span class="small">$</span>25K
+                    </p>
+                  </div>
+    
+                  <p class="product-text">
+                    10 Minutes
+                  </p>
+    
+                  <div class="rating">★★★★★</div>
+    
+                </div>
+    
+              </div>
+    
+            </a>
+    
+            <a href="#">
+    
+              <div class="product-card">
+    
+                <div class="img-box">
+                  <img src="./assets/popular2.jpg" alt="product image" class="product-img" width="200" loading="lazy">
+    
+                  <div class="card-badge red">
+                    <ion-icon name="flame"></ion-icon>
+                    <p>Dishes</p>
+                  </div>
+                </div>
+    
+                <div class="product-content">
+    
+                  <div class="wrapper">
+                    <h3 class="product-name">Quinoa Salad</h3>
+    
+                    <p class="product-price">
+                      <span class="small">$</span>20K
+                    </p>
+                  </div>
+    
+                  <p class="product-text">
+                    10 Minutes
+                  </p>
+    
+                  <div class="rating">★★★★★</div>
+    
+                </div>
+    
+              </div>
+    
+            </a>
+    
+            <a href="#">
+    
+              <div class="product-card">
+    
+                <div class="img-box">
+                  <img src="./assets/popular6.jpg" alt="product image" class="product-img" width="200" loading="lazy">
+    
+                  <div class="card-badge orange">
+                    <ion-icon name="leaf"></ion-icon>
+                    <p>Drinks</p>
+                  </div>
+                </div>
+    
+                <div class="product-content">
+    
+                  <div class="wrapper">
+                    <h3 class="product-name">Vegetables Juice</h3>
+    
+                    <p class="product-price">
+                      <span class="small">$</span>10K
+                    </p>
+                  </div>
+    
+                  <p class="product-text">
+                    8 Minutes
+                  </p>
+    
+                  <div class="rating">★★★★★</div>
+    
+                </div>
+    
+              </div>
+    
+            </a>
+    
+            <a href="#">
+    
+              <div class="product-card">
+    
+                <div class="img-box">
+                  <img src="./assets/popular4.png" alt="product image" class="product-img" width="200" loading="lazy">
+                  <div class="card-badge green">
+                    <ion-icon name="leaf"></ion-icon>
+                    <p>Salads</p>
+                  </div>
+                </div>
+    
+                <div class="product-content">
+    
+                  <div class="wrapper">
+                    <h3 class="product-name">Mushroom Risotto</h3>
+    
+                    <p class="product-price">
+                      <span class="small">$</span>30K
+                    </p>
+                  </div>
+    
+                  <p class="product-text">
+                    15 Minutes
+                  </p>
+    
+                  <div class="rating">★★★★★</div>
+    
+                </div>
+    
+              </div>
+    
+            </a>
+    
+          </div>
+
+        </section>  
 
     <!-- ABOUT US-->
     <section id="about-us">
-        <img src="/assets/about-us.png" alt="Tentang Kami">
+        <img src="./assets/about-us.png" alt="Tentang Kami">
         <div class="about-us-text">
-            <h2 class="about-us-title">Tentang Kami</h2>
+            <h2 class="about-us-title">About Us</h2>
             <p class="about-us-content">
-                Kami menggunakan bahan-bahan segar dan berkualitas tinggi, serta mengutamakan masakan yang rendah lemak dan bebas daging. Kami percaya bahwa makanan vegetarian dapat memenuhi selera makan Anda dan memberikan manfaat kesehatan yang besar.
-                <br><br>
-                Kami didirikan dengan visi untuk memberikan alternatif makanan sehat dan berkelanjutan bagi masyarakat Indonesia. Kami mengutamakan bahan-bahan alami dan segar dalam setiap hidangan kami, serta memastikan bahwa setiap sajian tidak hanya memanjakan lidah Anda, tetapi juga mendukung gaya hidup sehat dan lingkungan yang berkelanjutan.
+                Indulge in our culinary creations featuring fresh, high-quality, and meat-free ingredients. Our vision is to offer healthy, sustainable alternatives, prioritizing natural, flavorful dishes that cater to both your taste buds and well-being, fostering a healthy lifestyle and environment.
             </p>
-            <a href="/team.html" class="about-us-btn">Our Team</a>
+            <a href="./team.html" class="about-us-btn">Our Team</a>
         </div>
     </section>
 
@@ -171,75 +349,129 @@
         </ul>
         <div class="product">
             <div class="itemBox" data-item="dishes">
-                <img src="assets/menu/dish1-PhotoRoom.jpg" alt="">
+                <img src="./assets/menu/dish1-PhotoRoom.jpg" alt="">
+                <a class="card-tag tag-menu">DISHES</a>
+                <div class="wrapper">
+                    <h3 class="product-name">Pasta Dish</h3>
+                    <p class="product-price">
+                      <span class="small">$</span>27K
+                    </p>
+                  </div>
                 <div class="card-body">
-                    <a class="card-tag tag-menu">DISHES</a>
-                    <h3 class="card-title">Pasta Dish</h3>
-                    <p class="card-text">Harga: Rp.15.000</p>
+                    <p class="card-text">12 Minutes</p>
+                    <div class="rating">★★★★★</div>
                 </div>
             </div>
             <div class="itemBox" data-item="dishes">
-                <img src="assets/menu/dish2-PhotoRoom.jpg" alt="">
+                <img src="./assets/menu/dish2-PhotoRoom.jpg" alt="">
+                <a class="card-tag tag-menu">DISHES</a>
+                <div class="wrapper">
+                    <h3 class="product-name">Fit</h3>
+                    <p class="product-price">
+                      <span class="small">$</span>17K
+                    </p>
+                  </div>
                 <div class="card-body">
-                    <a class="card-tag tag-menu">DISHES</a>
-                    <h3 class="card-title">Fit</h3>
-                    <p class="card-text">Harga: Rp.15.000</p>
+                    <p class="card-text">15 Minutes</p>
+                    <div class="rating">★★★★★</div>
                 </div>
             </div>
             <div class="itemBox" data-item="dishes">
-                <img src="assets/menu/dish3-PhotoRoom.jpg" alt="">
+                <img src="./assets/menu/dish3-PhotoRoom.jpg" alt="">
+                <a class="card-tag tag-menu">DISHES</a>
+                <div class="wrapper">
+                    <h3 class="product-name">Fruit Dish</h3>
+                    <p class="product-price">
+                      <span class="small">$</span>25K
+                    </p>
+                  </div>
                 <div class="card-body">
-                    <a class="card-tag tag-menu">DISHES</a>
-                    <h3 class="card-title">Fruit Dish</h3>
-                    <p class="card-text">Harga: Rp.15.000</p>
+                    <p class="card-text">12 Minutes</p>
+                    <div class="rating">★★★★★</div>
                 </div>
             </div>
             <div class="itemBox" data-item="salad">
-                <img src="assets/menu/salad1-PhotoRoom.jpg" alt="">
+                <img src="./assets/menu/salad1-PhotoRoom.jpg" alt="">
+                <a class="card-tag tag-menu2">Salad</a>
+                <div class="wrapper">
+                    <h3 class="product-name">Green Salad</h3>
+                    <p class="product-price">
+                      <span class="small">$</span>20K
+                    </p>
+                  </div>
                 <div class="card-body">
-                    <a class="card-tag tag-menu2">SALAD</a>
-                    <h3 class="card-title">Green Salad</h3>
-                    <p class="card-text">Harga: Rp.15.000</p>
+                    <p class="card-text">10 Minutes</p>
+                    <div class="rating">★★★★★</div>
                 </div>
             </div>
             <div class="itemBox" data-item="salad">
-                <img src="assets/menu/salad2-PhotoRoom.jpg" alt="">
+                <img src="./assets/menu/salad2-PhotoRoom.jpg" alt="">
+                <a class="card-tag tag-menu2">Salad</a>
+                <div class="wrapper">
+                    <h3 class="product-name">Pasta Salad</h3>
+                    <p class="product-price">
+                      <span class="small">$</span>23K
+                    </p>
+                  </div>
                 <div class="card-body">
-                    <a class="card-tag tag-menu2">SALAD</a>
-                    <h3 class="card-title">Salad Pasta</h3>
-                    <p class="card-text">Harga: Rp.15.000</p>
+                    <p class="card-text">10 Minutes</p>
+                    <div class="rating">★★★★★</div>
                 </div>
             </div>
             <div class="itemBox" data-item="salad">
-                <img src="assets/menu/salad3-PhotoRoom.jpg" alt="">
+                <img src="./assets/menu/salad3-PhotoRoom.jpg" alt="">
+                <a class="card-tag tag-menu2">Salad</a>
+                <div class="wrapper">
+                    <h3 class="product-name">Chicken Salad</h3>
+                    <p class="product-price">
+                      <span class="small">$</span>25K
+                    </p>
+                  </div>
                 <div class="card-body">
-                    <a class="card-tag tag-menu2">SALAD</a>
-                    <h3 class="card-title">Chicken Salad</h3>
-                    <p class="card-text">Harga: Rp.15.000</p>
+                    <p class="card-text">10 Minutes</p>
+                    <div class="rating">★★★★★</div>
                 </div>
             </div>
             <div class="itemBox" data-item="drinks">
-                <img src="assets/menu/juice1-PhotoRoom.jpg" alt="">
+                <img src="./assets/menu/juice1-PhotoRoom.jpg" alt="">
+                <a class="card-tag tag-menu3">DRINKS</a>
+                <div class="wrapper">
+                    <h3 class="product-name">Orange Juice</h3>
+                    <p class="product-price">
+                      <span class="small">$</span>12K
+                    </p>
+                  </div>
                 <div class="card-body">
-                    <a class="card-tag tag-menu3">DRINKS</a>
-                    <h3 class="card-title">Orange Juice</h3>
-                    <p class="card-text">Harga: Rp.15.000</p>
+                    <p class="card-text">7 Minutes</p>
+                    <div class="rating">★★★★★</div>
                 </div>
             </div>
             <div class="itemBox" data-item="drinks">
-                <img src="assets/menu/juice2-PhotoRoom.jpg" alt="">
+                <img src="./assets/menu/juice2-PhotoRoom.jpg" alt="">
+                <a class="card-tag tag-menu3">DRINKS</a>
+                <div class="wrapper">
+                    <h3 class="product-name">Vegetables Juice</h3>
+                    <p class="product-price">
+                      <span class="small">$</span>10K
+                    </p>
+                  </div>
                 <div class="card-body">
-                    <a class="card-tag tag-menu3">DRINKS</a>
-                    <h3 class="card-title">Vegetable Juice</h3>
-                    <p class="card-text">Harga: Rp.15.000</p>
+                    <p class="card-text">8 Minutes</p>
+                    <div class="rating">★★★★★</div>
                 </div>
             </div>
             <div class="itemBox" data-item="drinks">
-                <img src="assets/menu/juice3-PhotoRoom.jpg" alt="">
+                <img src="./assets/menu/juice3-PhotoRoom.jpg" alt="">
+                <a class="card-tag tag-menu3">DRINKS</a>
+                <div class="wrapper">
+                    <h3 class="product-name">Strawberry Juice</h3>
+                    <p class="product-price">
+                      <span class="small">$</span>12K
+                    </p>
+                  </div>
                 <div class="card-body">
-                    <a class="card-tag tag-menu3">DRINKS</a>
-                    <h3 class="card-title">Strawberry Juice</h3>
-                    <p class="card-text">Harga: Rp.15.000</p>
+                    <p class="card-text">5 Minutes</p>
+                    <div class="rating">★★★★★</div>
                 </div>
             </div>
         </div>
@@ -253,9 +485,9 @@
         <div class="left-content">
             <div class="section-title">Booking Table</div>
             <div class="section-description">
-                <p>Dapatkan pengalaman kuliner unik di Indonesia ForFit, restoran kami yang berfokus pada makanan vegetarian. Nikmati cita rasa autentik Indonesia dalam setiap gigitan, sambil tetap menjaga kesehatan Anda. Jadikan kunjungan Anda lebih istimewa dengan memesan meja di restoran kami. Kami menawarkan lingkungan yang nyaman dan layanan ramah, sehingga Anda dapat menikmati makanan lezat kami dengan suasana yang santai. Jadwalkan kunjungan Anda sekarang dan bergabunglah dengan kami dalam menjalani gaya hidup sehat dan berkelanjutan bersama-sama.</p>
+                <p>Experience unique vegetarian culinary delights at Indonesia ForFit, where authentic Indonesian flavors meet health-conscious dining. Book a table for a special visit, relish delicious meals, and embrace a relaxed, sustainable lifestyle with us.</p>
             </div>
-            <a href="/booking.html" class="book-button">Book a Table</a>
+            <a href="./booking.html" class="book-button">Book a Table</a>
         </div>
         <div class="table-image">
             <img src="assets/about_us.png" width="100%" alt="Meja Makan">
@@ -266,17 +498,17 @@
     <p class="title-order">How To Order</p>
     <section class="order-section">
         <div class="order-card">
-            <img src="assets/bell.png" alt="" class="order-icon">
+            <img src="./assets/bell.png" alt="" class="order-icon">
             <div class="order-title">Order Food</div>
             <div class="order-description">Browse our menu and place an order for your favorite dishes.</div>
         </div>
         <div class="order-card">
-            <img src="assets/checklist.png" alt="" class="order-icon">
+            <img src="./assets/checklist.png" alt="" class="order-icon">
             <div class="order-title">Order Drinks</div>
             <div class="order-description">Quench your thirst with our selection of refreshing drinks and beverages.</div>
         </div>
         <div class="order-card">
-            <img src="assets/vegetarian.png" alt="" class="order-icon">
+            <img src="./assets/vegetarian.png" alt="" class="order-icon">
             <div class="order-title">Order Desserts</div>
             <div class="order-description">Indulge in our delectable desserts for a sweet ending to your meal.</div>
         </div>
@@ -293,7 +525,7 @@
                 <div class="swiper-wrapper">
                 <div class="swiper-slide testimonials-item">
                     <div class="info">
-                        <img src="assets/natalie-portman.jpeg" alt="img-customer">
+                        <img src="./assets/natalie-portman.jpeg" alt="img-customer">
                         <div class="text-box">
                             <h3 class="name">Natalie Portman</h3>
                             <span class="job">Actress</span>
@@ -310,7 +542,7 @@
                 </div>
                 <div class="swiper-slide testimonials-item">
                     <div class="info">
-                        <img src="assets/Liam-Hemsworth.jpeg" alt="img-customer">
+                        <img src="./assets/Liam-Hemsworth.jpeg" alt="img-customer">
                         <div class="text-box">
                             <h3 class="name">Liam Hemsworth</h3>
                             <span class="job">Actor</span>
@@ -327,7 +559,7 @@
                 </div>
                 <div class="swiper-slide testimonials-item">
                     <div class="info">
-                        <img src="assets/lucy-watson.jpeg" alt="img-customer">
+                        <img src="./assets/lucy-watson.jpeg" alt="img-customer">
                         <div class="text-box">
                             <h3 class="name">Lucy Watson</h3>
                             <span class="job">Jurnalist</span>
@@ -344,7 +576,7 @@
                 </div>
                 <div class="swiper-slide testimonials-item">
                     <div class="info">
-                        <img src="assets/maggie-q.jpeg" alt="img-customer">
+                        <img src="./assets/maggie-q.jpeg" alt="img-customer">
                         <div class="text-box">
                             <h3 class="name">Maggie Q</h3>
                             <span class="job">Actress</span>
@@ -361,7 +593,7 @@
                 </div>
                 <div class="swiper-slide testimonials-item">
                     <div class="info">
-                        <img src="assets/Benedict-Cumberbatch.jpeg" alt="img-customer">
+                        <img src="./assets/Benedict-Cumberbatch.jpeg" alt="img-customer">
                         <div class="text-box">
                             <h3 class="name">Benedict Cumberbatch</h3>
                             <span class="job">Actor</span>
@@ -378,7 +610,7 @@
                 </div>
                 <div class="swiper-slide testimonials-item">
                     <div class="info">
-                        <img src="assets/ariana-grande.jpeg" alt="img-customer">
+                        <img src="./assets/ariana-grande.jpeg" alt="img-customer">
                         <div class="text-box">
                             <h3 class="name">Ariana Grande</h3>
                             <span class="job">Actress</span>
@@ -405,10 +637,10 @@
     <section class="discount-section">
         <div class="discount-container">
             <div class="discount-content">
-                <h3 class="title-discount">Masukkan alamat email Anda untuk menerima penawaran khusus kami</h3>
+                <h3 class="title-discount">Enter your email address to receive our special offers</h3>
                 <form action="#" class="email-form" method="get">
                     <div class="email-input">
-                        <input type="email" placeholder="Masukkan alamat email Anda" required>
+                        <input type="email" placeholder="Enter your email address" required>
                         <button type="submit"><a class="btn-discount">SUBMIT</a></button>
                     </div>
                 </form>
@@ -420,25 +652,26 @@
     <footer>
         <div class="footer-content">
             <div class="logo">
-                <img src="assets/forfit-indonesia-logo-removebg-preview.png" alt="Logo Restoran Vegetarian">
+                <img src="./assets/forfit-indonesia-high-resolution-logo-transparent.png" alt="Logo Restoran Vegetarian">
             </div>
             <div class="address">
-                <p>Alamat Restoran:</p>
-                <p>Jl. Contoh No. 123, Kota Anda</p>
+                <p>Address:</p>
+                <p>2020 Massachusetts Ave NW, Washington, DC 20036, United States of America</p>
             </div>
             <div class="contact">
                 <p>Contact Us:</p>
                 <p>Email: info@restoranvegetarian.com</p>
-                <p>Telepon: (123) 456-7890</p>
+                <p>Phone        : (123) 456-7890</p>
             </div>
             <div class="social-icons">
-                <a href="#"><img src="assets/instagram-logo.png" alt="Instagram"></a>
-                <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="assets/whatsapp.png" alt="WhatsApp"></a>
+                <a href="https://instagram.com/instagram?igshid=NzZlODBkYWE4Ng=="><img src="assets/instagram-logo.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/videos?campaign_id=1661741489&extra_1=s%7Cc%7C513502597352%7Ce%7Cfacebook%7C&placement=&creative=513502597352&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D1661741489%26adgroupid%3D65609010858%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-541132862%26loc_physical_ms%3D9126764%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiA67CrBhC1ARIsACKAa8QB_QUtVDpOUz7clUHF37zNyJ9F-gBZ82ZYjiWn-WoVVp3O897d6BsaAslsEALw_wcB"><img src="assets/facebook.png" alt="Facebook"></a>
+                <a href="https://www.whatsapp.com/?lang=id_ID"><img src="assets/whatsapp.png" alt="WhatsApp"></a>
             </div>
+            
         </div>
     </footer>
-
+</div>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>

@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Font Family -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&display=swap">
     <!-- JavaScript -->
     <script src="js/script.js" defer></script>
     
 </head>
 <body>
+    <div class="main-container">
     <header class="primary-header flex">
         <div>
             <img src="assets/forfit-indonesia-logo.png" alt="logo" class="logo">
@@ -24,27 +26,32 @@
         <nav>
             <ul id="primary-navigation" class="primary-navigation flex" data-visible="false"> 
                 <li class="active">
-                    <a href="/index.html">
+                    <a href="./index.html">
                         <span aria-hidden="true"></span>Home
                     </a>
                 </li>
                 <li>
-                    <a href="/index.html#menu">
+                    <a href="./index.html#menu">
                         <span aria-hidden="true"></span>Menu
                     </a>
                 </li>
                 <li>
-                    <a href="/index.html#about-us">
+                    <a href="./index.html#about-us">
                         <span aria-hidden="true"></span>About
                     </a>
                 </li>
                 <li>
-                    <a href="/booking.html" class="home-active">
+                    <a href="./booking.html" class="home-active">
                         <span aria-hidden="true"></span>Booking
                     </a>
                 </li>
                 <li>
-                    <a href="/team.html">
+                    <a href="./list-booking.html">
+                        <span aria-hidden="true"></span>List Booking
+                    </a>
+                </li>
+                <li>
+                    <a href="./team.html">
                         <span aria-hidden="true"></span>Our Team
                     </a>
                 </li>
@@ -61,21 +68,21 @@
             <div class = "card-content">
                 <h3>Reservation</h3>
                 <h4>Book A Table Online</h4>
-                <form id="bookingForm"  class="booking-form">
+                <form action="./list-booking.html" id="bookingForm"  class="booking-form">
                     <div class = "form-row">
                         <select name="table" id="table" class="table">
-                            <option value="table-select">Pilih Meja</option>
-                            <option value="meja 01">Meja 01</option>
-                            <option value="meja 02">Meja 02</option>
-                            <option value="meja 03">Meja 03</option>
-                            <option value="meja 04">Meja 04</option>
-                            <option value="meja 05">Meja 05</option>
-                            <option value="meja 06">Meja 06</option>
-                            <option value="meja 07">Meja 07</option>
-                            <option value="meja 08">Meja 08</option>
+                            <option value="table-select">Select Table</option>
+                            <option value="meja 01">Table 01</option>
+                            <option value="meja 02">Table 02</option>
+                            <option value="meja 03">Table 03</option>
+                            <option value="meja 04">Table 04</option>
+                            <option value="meja 05">Table 05</option>
+                            <option value="meja 06">Table 06</option>
+                            <option value="meja 07">Table 07</option>
+                            <option value="meja 08">Table 08</option>
                         </select>
                         <select name="hours" id="hours">
-                            <option value = "hour-select">Pilih Jam</option>
+                            <option value = "hour-select">Select Hour</option>
                             <option value = "10:00">10: 00</option>
                             <option value = "12:00">12: 00</option>
                             <option value = "14:00">14: 00</option>
@@ -86,19 +93,19 @@
                         </select>
                     </div>
                     <div class="form-row">
-                        <input type="text" id="name" name="visitor_name" placeholder="Masukkan Nama Anda" pattern="[A-Z\sa-z]{3,20}" required oninvalid="setCustomValidity('Nama tidak boleh mengandung angka atau karakter unique')">
+                        <input type="text" id="name" name="visitor_name" placeholder="Insert Your Name" required>
                         <input type="email" id="email" name="visitor_email" placeholder="(username)@email.com" required>
                     </div>
 
                     <div class="form-row">
                         <input type="date" id="date" name="date" required>
                         <select id="person" name="person" required>
-                            <option value="">Masukkan jumlah orang yang hadir</option>
-                            <option value="1 orang">1 Orang</option>
-                            <option value="2 orang">2 Orang</option>
-                            <option value="3 orang">3 Orang</option>
-                            <option value="4 orang">4 Orang</option>
-                            <option value="5 orang">5 Orang</option>
+                            <option value="">Number of Guest</option>
+                            <option value="1 orang">1 Person</option>
+                            <option value="2 orang">2 Persons</option>
+                            <option value="3 orang">3 Persons</option>
+                            <option value="4 orang">4 Persons</option>
+                            <option value="5 orang">5 Persons</option>
                         </select>
                         
                     </div>
@@ -106,23 +113,23 @@
                         <textarea name="specialRequest" id="specialRequest" cols="100" rows="5" placeholder="Special Request"></textarea>
                     </div>
                     <div class = "form-row">
-                        <input type="submit" value="BOOK NOW" onclick="saveBooking()">
+                        <input type="submit" value="BOOK NOW">
                     </div>
                 </form>
             </div>
         </div>
     </section>
     <div class="filter-container">
-        <h2>Daftar Booking Table </h2>
+        <h2>Booking Table List</h2>
         <div class="filter-data">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="search" oninput="filterTable()" placeholder="Cari berdasarkan nama">
+        <input type="text" id="search" oninput="filterTable()" placeholder="Search by name">
         <i class="fa-solid fa-sort" style="color: #050505;"></i>
         <select id="sort" onchange="sortTable()">
-            <option value="table">Meja</option>
-            <option value="time">Jam</option>
-            <option value="name">Nama</option>
-            <option value="date">Tanggal</option>
+            <option value="table">Table</option>
+            <option value="time">Hour</option>
+            <option value="name">Name</option>
+            <option value="date">Date</option>
         </select>
     </div>
     </div>    
@@ -130,14 +137,14 @@
 <table id="bookingTable">
     <thead>
     <tr>
-        <th>Meja</th>
-        <th>Jam</th>
-        <th>Nama</th>
+        <th>Table</th>
+        <th>Hour</th>
+        <th>Name</th>
         <th>Email</th>
-        <th>Tanggal</th>
-        <th>Jumlah Tamu</th>
+        <th>Date</th>
+        <th>Number of Guest</th>
         <th>Special Request</th>
-        <th>Aksi</th>
+        <th>Action</th>
     </tr>
     </thead>
     <tbody id="bookingTableBody">
@@ -148,23 +155,25 @@
     <footer>
         <div class="footer-content">
             <div class="logo">
-                <img src="assets/forfit-indonesia-logo-removebg-preview.png" alt="Logo Restoran Vegetarian">
+                <img src="assets/forfit-indonesia-high-resolution-logo-transparent.png" alt="Logo Restoran Vegetarian">
             </div>
             <div class="address">
-                <p>Alamat Restoran:</p>
-                <p>Jl. Contoh No. 123, Kota Anda</p>
+                <p>Address:</p>
+                <p>2020 Massachusetts Ave NW, Washington, DC 20036, United States of America</p>
             </div>
             <div class="contact">
                 <p>Contact Us:</p>
                 <p>Email: info@restoranvegetarian.com</p>
-                <p>Telepon: (123) 456-7890</p>
+                <p>Phone        : (123) 456-7890</p>
             </div>
             <div class="social-icons">
-                <a href="#"><img src="assets/instagram-logo.png" alt="Instagram"></a>
-                <a href="#"><img src="assets/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="assets/whatsapp.png" alt="WhatsApp"></a>
+                <a href="https://instagram.com/instagram?igshid=NzZlODBkYWE4Ng=="><img src="assets/instagram-logo.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/videos?campaign_id=1661741489&extra_1=s%7Cc%7C513502597352%7Ce%7Cfacebook%7C&placement=&creative=513502597352&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D1661741489%26adgroupid%3D65609010858%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-541132862%26loc_physical_ms%3D9126764%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=Cj0KCQiA67CrBhC1ARIsACKAa8QB_QUtVDpOUz7clUHF37zNyJ9F-gBZ82ZYjiWn-WoVVp3O897d6BsaAslsEALw_wcB"><img src="assets/facebook.png" alt="Facebook"></a>
+                <a href="https://www.whatsapp.com/?lang=id_ID"><img src="assets/whatsapp.png" alt="WhatsApp"></a>
             </div>
+            
         </div>
     </footer>
+</div>
 </body>
 </html>
