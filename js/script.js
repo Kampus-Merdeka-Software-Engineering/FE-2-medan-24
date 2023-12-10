@@ -45,13 +45,15 @@ for (let i = 0; i < list.length;
 const url = 'http://localhost:3003/users';
 const tableBody = document.getElementById('bookingTableBody');
 
-tableBody.innerHTML = '';
+
+let output = '';
 
 
 const renderBooking = (bookings) => {
   bookings.forEach(booking => {
-    const newRow = document.createElement('tr');
-    newRow.innerHTML = `
+    output  += `
+    <div data-id=${booking.booking_id}>
+    <tr>
       <td>${booking.table}</td>
       <td>${booking.hours}</td>
       <td>${booking.name}</td>
@@ -63,8 +65,10 @@ const renderBooking = (bookings) => {
         <button id="edit-booking">Edit</button>
         <button id="delete-booking">Hapus</button>
       </td>
+    </tr>
+    </div>  
     `;
-    tableBody.appendChild(newRow);
+    tableBody.innerHTML = output;
   });
 }
 
@@ -75,68 +79,126 @@ fetch(url)
 
 
 // POST METHOD
-const addBookingForm = document.getElementById('bookingForm');
-const tableValue = document.getElementById('table');
-const hoursValue = document.getElementById('hours');
-const nameValue = document.getElementById('name');
-const emailValue = document.getElementById('email');
-const dateValue = document.getElementById('date');
-const personValue = document.getElementById('person');
-const specialRequestValue = document.getElementById('specialRequest');
-
-
+const addBookingForm = document.querySelector('.booking-form');
 
 
 addBookingForm.addEventListener('submit', (e) => {
   e.preventDefault();
+
+  var tableValue = document.getElementById('table').value;
+  var hoursValue = document.getElementById('hours').value;
+  var nameValue = document.getElementById('name').value;
+  var emailValue = document.getElementById('email').value;
+  var dateValue = document.getElementById('date').value;
+  var personValue = document.getElementById('person').value;
+  var specialRequestValue = document.getElementById('specialRequest').value;
+
+  console.log(nameValue.value)
   fetch(url, {
     method: 'POST' ,
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      table: tableValue.value,
-      hours: hoursValue.value,
-      name: nameValue.value,
-      email: emailValue.value,
-      date: dateValue.value,
-      person: personValue.value,
-      specialRequest: specialRequestValue.value
+      table: tableValue,
+      hours: hoursValue,
+      name: nameValue,
+      email: emailValue,
+      date: dateValue,
+      person: personValue,
+      specialRequest: specialRequestValue
     })
   })
   .then(res => res.json())
   .then(data => {
     const dataArray = [];
     dataArray.push(data);
+    console.log(data)
     renderBooking(dataArray);
   })
 })
 
 
-// tableBody.addEventListener('click', (e) => {
+// DELETE
+
+tableBody.addEventListener('click', (e) => {
+  e.preventDefault();
+  let delButtonIsPressed = e.target.id == 'delete-booking';
+  let editButtonIsPressed = e.target.id == 'edit-booking';
+
+  let id = e.target.parentElement.dataset.id;
+
+  // Delete Booking
+  // DELETE METHOD
+  if(delButtonIsPressed) {
+    fetch(`${url}/${id}`, {
+      method: 'DELETE',
+    })
+    .then(res => res.json())
+    .then(() => location.reload())
+  }
+
+  if(editButtonIsPressed) {
+    const parent = e.target.parentElement;
+    let tableContent = parent.querySelector('.table').textContent;
+    console.log(tableContent);
+  }
+});
+
+//POST EMAIL
+function postOffering(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const email = form.querySelector('[name="email"]').value;
+
+  const data = {
+    email: email
+  };
+
+  fetch('http://localhost:3003/offering', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+    form.reset();
+    alert(data.message)
+  });
+}
+
+document.querySelector('.discount-content form').addEventListener('submit', postOffering);
+
+
+// addOfferingForm = document.querySelector('.email-form')
+
+// addOfferingForm.addEventListener('submit', (e) => {
 //   e.preventDefault();
-//   let delButtonIsPressed = e.target.id == 'delete-booking';
-//   let editButtonIsPressed = e.target.id == 'edit-booking';
 
-//   let id = e.target.parentElement.dataset.id;
+//   var emailValue = document.getElementById('email').value;
 
-//   // Delete Booking
-//   // DELETE METHOD
-//   if(delButtonIsPressed) {
-//     fetch(`${url}/${id}`, {
-//       method: 'DELETE',
+//   console.log(emailValue.value)
+//   fetch('http://localhost:3003/offering', {
+//     method: 'POST' ,
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({
+//       email: emailValue,
 //     })
-//     .then(res => res.json())
-//     .then(() => location.reload())
-//   }
-
-//   if(editButtonIsPressed) {
-//     const parent = e.target.parentElement;
-//     let tableContent = parent.querySelector('.table').textContent;
-//     console.log(tableContent);
-//   }
-// });
-
+//   })
+//   .then(res => res.json())
+//   .then(data => {
+//     const dataArray = [];
+//     dataArray.push(data);
+//     console.log(data)
+//     renderBooking(dataArray);
+//   })
+// })
 // // Booking FORM
 // const bookedSlots = []; // Array untuk menyimpan slot yang sudah dipesan
 
