@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Righteous&display=swap">
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- JavaScript -->
     <script src="./js/script.js" defer></script>
+    <script src="./js/booking.js" defer></script>
     
 </head>
 <body>
@@ -64,11 +67,10 @@
             <div class = "card-img">
                 <!-- image here -->
             </div>
-
             <div class = "card-content">
                 <h3>Reservation</h3>
                 <h4>Book A Table Online</h4>
-                <form action="/list-booking.html" id="bookingForm"  class="booking-form" method="POST">
+                <form action="./list-booking.html" id="bookingForm"  class="booking-form" method="POST">
                     <div class = "form-row">
                         <select name="table" id="table" class="table">
                             <option value="table-select">Select Table</option>
@@ -96,7 +98,6 @@
                         <input type="text" id="name" name="visitor_name" placeholder="Insert Your Name" required>
                         <input type="email" id="email" name="visitor_email" placeholder="(username)@email.com" required>
                     </div>
-
                     <div class="form-row">
                         <input type="date" id="date" name="date" required>
                         <select id="person" name="person" required>
@@ -119,38 +120,6 @@
             </div>
         </div>
     </section>
-    <div class="filter-container">
-        <h2>Booking Table List</h2>
-        <div class="filter-data">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="search" oninput="filterTable()" placeholder="Search by name">
-        <i class="fa-solid fa-sort" style="color: #050505;"></i>
-        <select id="sort" onchange="sortTable()">
-            <option value="table">Table</option>
-            <option value="time">Hour</option>
-            <option value="name">Name</option>
-            <option value="date">Date</option>
-        </select>
-    </div>
-    </div>    
-    <!-- Tabel untuk menampilkan data booking -->
-<table id="bookingTable">
-    <thead>
-    <tr>
-        <th>Table</th>
-        <th>Hour</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Date</th>
-        <th>Number of Guest</th>
-        <th>Special Request</th>
-        <th>Action</th>
-    </tr>
-    </thead>
-    <tbody id="bookingTableBody">
-    <!-- Data booking akan ditampilkan di sini -->
-    </tbody>
-</table>
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">

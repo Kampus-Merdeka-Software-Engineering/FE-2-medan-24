@@ -13,9 +13,13 @@
     <!-- Link Swiper's CSS -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- JavaScript -->
     <script src="./js/script.js" defer></script>
     <script src="./js/swiper.js" defer></script>
+    <script src="./js/offering.js" defer></script>
+
 </head>
 <body>
     <div class="main-container">
@@ -659,7 +663,7 @@
                 <form class="email-form" >
                     <div class="email-input">
                         <input name="email" id="email" type="email" placeholder="Enter your email address" required>
-                        <button type="submit"><a class="btn-discount">SUBMIT</a></button>
+                        <button id="sweetAlert" type="submit"><a class="btn-discount">SUBMIT</a></button>
                     </div>
                 </form>
             </div>
