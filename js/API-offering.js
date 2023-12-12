@@ -6,25 +6,38 @@ function postOffering(event) {
   const email = form.querySelector('[name="email"]').value;
 
   const data = {
-    email: email
+      email: email
   };
 
   fetch('https://be-2-medan-24.up.railway.app/offering', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
   })
-  .then(res => res.json())
+  .then(res => {
+      if (!res.ok) {
+          throw new Error('Failed to submit email. Email has already been sent previously.');
+      }
+      return res.json();
+  })
   .then(data => {
-    console.log(data);
-    form.reset();
-    Swal.fire({
-      icon: 'success',
-      title: 'Congratulations!',
-      text: data.msg,
-    });
+      console.log(data);
+      form.reset();
+      Swal.fire({
+          icon: 'success',
+          title: 'Congratulations!',
+          text: data.msg,
+      });
+  })
+  .catch(error => {
+      console.error(error.message);
+      Swal.fire({
+          icon: 'error',
+          title: 'Sorry :(',
+          text: error.message,
+      });
   });
 }
 

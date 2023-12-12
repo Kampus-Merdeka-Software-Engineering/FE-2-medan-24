@@ -2,9 +2,7 @@
 const url = 'https://be-2-medan-24.up.railway.app/users';
 const tableBody = document.getElementById('bookingTableBody');
 
-
 let output = '';
-
 
 const renderBooking = (bookings) => {
   bookings.forEach(booking => {
